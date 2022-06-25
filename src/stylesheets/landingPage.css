@@ -1,0 +1,65 @@
+.ff-nav-wrap {
+  background-color: var(--ff-secondary);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 1rem 2rem;
+}
+
+.ff-nav-head {
+  font-weight: 500;
+  font-size: 3rem;
+  justify-self: start;
+}
+
+.ff-nav-icon-wrap {
+  justify-self: end;
+}
+
+.ff-hero-wrap {
+  background-color: var(--ff-secondary);
+}
+
+.ff-hero-container-main {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 50%;
+}
+
+.ff-hero-container-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  color: var(--bg-white);
+}
+
+.ff-btn-primary {
+  color: var(--bg-white);
+  text-transform: uppercase;
+  background: var(--ff-primary);
+  font-size: 1.5rem;
+}
+
+.ff-btn-secondary {
+  font-weight: 500;
+}
+
+.ff-nav-search {
+  width: 100%;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  border: none;
+}
+
+.ff-hero-text-box {
+  margin: 1rem;
+  line-height: 3rem;
+  padding: 0;
+}
+
+.text-orange {
+  color: var(--ff-primary);
+}
