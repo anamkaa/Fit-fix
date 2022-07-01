@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -24,10 +25,11 @@ const Hero = () => {
               </p>
             </p>
 
-            <button class="btn btn-warning-ghost ff-btn-primary btn-lg">
-              START NOW
-            </button>
-
+            <Link to="/videolistingpage">
+              <button class="btn btn-warning-ghost ff-btn-primary btn-lg">
+                START NOW
+              </button>
+            </Link>
             <div className="ff-hero-container-category">
               <button className="btn btn-warning btn-warning-hover ff-btn-secondary">
                 YOGA
