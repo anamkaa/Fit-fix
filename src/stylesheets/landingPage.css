@@ -5,7 +5,7 @@
   padding: 0.5rem 2rem;
   position: fixed;
   width: 100%;
-  z-index: 999;
+  z-index: 2;
 }
 
 .ff-nav-head {

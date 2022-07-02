@@ -102,7 +102,7 @@
   right: 25px;
   background-color: var(--bg-white);
   border-radius: 0.1rem;
-  z-index: 99;
+  z-index: 1;
 }
 
 .ff-popup-sort {
@@ -113,12 +113,12 @@
   right: 70px;
   background-color: var(--bg-white);
   border-radius: 0.1rem;
-  z-index: 99;
+  z-index: 1;
 }
 
 .ff-arrowup {
   position: fixed;
-  z-index: 99999;
+  z-index: 3;
   bottom: 15px;
   right: 15px;
   color: var(--ff-primary);
