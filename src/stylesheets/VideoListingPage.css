@@ -22,9 +22,6 @@
 }
 
 .ff-container-aside-chip {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   padding-inline: 1rem;
   background-color: var(--ff-secondary);
 }
@@ -40,19 +37,6 @@
   letter-spacing: 1.5px;
   margin: 0.5rem;
   font-weight: 400;
-}
-
-.ff-container-content-category {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.ff-container-options {
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .ff-category-text {
@@ -80,32 +64,11 @@
   position: relative;
 }
 
-.ff-video-card-content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.ff-video-card-content-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: left;
-}
-
 .ff-video-card-content-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 1rem;
   font-weight: 600;
 }
 
 .ff-video-card-content-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
   font-size: 0.8rem;
   font-weight: 500;
 }
@@ -120,19 +83,15 @@
 
 .ff-icon-filter {
   display: block;
-  min-width: 30px;
-  height: 30px;
+  min-width: 20px;
+  height: 20px;
   justify-self: flex-start;
 }
 
 .ff-popup-chip {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   padding: 0.1rem;
   gap: 0.2rem;
   font-size: 0.9rem;
-  text-align: left;
 }
 
 .ff-popup {
@@ -150,8 +109,8 @@
   padding: 0.3rem;
   margin: 0.3rem;
   position: absolute;
-  top: 25px;
-  right: 55px;
+  top: 30px;
+  right: 70px;
   background-color: var(--bg-white);
   border-radius: 0.1rem;
   z-index: 99;

@@ -4,6 +4,7 @@
   background-color: var(--warning-bg-light);
   color: var(--warning);
   padding: 2rem;
+  gap: 1rem;
 }
 
 .ff-iframe {
@@ -22,21 +23,10 @@
 }
 
 .ff-videoplayer-text {
-  display: flex;
-  flex-direction: column;
   text-align: justify;
 }
 
-.ff-videoplayer-icon-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0;
-}
-
 .ff-videoplayer-icon-chip {
-  display: flex;
-  align-items: center;
   margin: 0.4rem;
   padding: 0.4rem;
   font-size: 0.9rem;
@@ -73,10 +63,13 @@
 }
 
 .ff-videoplayer-author-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   font-size: 1.2rem;
   font-weight: 500;
   margin-block: 0.5rem;
+}
+
+.ff-videoplayer-icon {
+  display: block;
+  min-width: 18px;
+  min-height: 18px;
 }

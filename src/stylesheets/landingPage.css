@@ -26,19 +26,10 @@
 }
 
 .ff-hero-container-main {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
   flex: 50%;
 }
 
 .ff-hero-container-text {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  align-items: flex-start;
   color: var(--bg-white);
 }
 
@@ -68,4 +59,8 @@
 
 .text-orange {
   color: var(--ff-primary);
+}
+
+.cursor {
+  cursor: pointer;
 }

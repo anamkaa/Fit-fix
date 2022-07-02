@@ -9,8 +9,14 @@ const VideoListingPage = () => {
   return (
     <>
       <Navbar />
-      <a href="#category"></a>
-      <ArrowCircleUp size={36} weight="fill" className="ff-arrowup" />
+      <ArrowCircleUp
+        size={36}
+        weight="fill"
+        className="ff-arrowup"
+        onClick={() => {
+          window.scrollTo(0, 0);
+        }}
+      />
 
       <div className="ff-container">
         <Aside />

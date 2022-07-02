@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <>
       <div className="ff-hero-wrap">
-        <div className="ff-hero-container-main">
+        <div className="ff-hero-container-main flex flex-row-rev flex-wrap flex-justify-space-evenly flex-align-center">
           <div className="ff-hero-container-img">
             <img
               src="../assets/hero-img.svg"
@@ -14,7 +14,7 @@ const Hero = () => {
             />
           </div>
 
-          <div className="ff-hero-container-text">
+          <div className="ff-hero-container-text flex flex-col text-left flex-align-start">
             <p className="ff-hero-text-box">
               <p className="h6"> FIX YOUR FITNESS</p>
 

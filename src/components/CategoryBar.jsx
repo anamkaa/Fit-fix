@@ -7,8 +7,11 @@ const CategoryBar = () => {
 
   return (
     <>
-      <div className="ff-container-options" id="category">
-        <div className="ff-container-content-category">
+      <div
+        className="ff-container-options flex flex-align-center flex-justify-space-btw"
+        id="category"
+      >
+        <div className="ff-container-content-category flex flex-align-center flex-wrap">
           <div className="ff-category-text btn btn-warning btn-warning-hover ff-btn-secondary">
             All
           </div>
@@ -30,9 +33,11 @@ const CategoryBar = () => {
           onClick={() =>
             setsortPopup((sortPopup) => (!sortPopup ? true : false))
           }
+          className="flex flex-align-center cursor"
         >
           {/* */}
-          <Funnel size={22} className="text-orange ff-icon-filter" />
+          <span className="text-orange">Sort</span>
+          <Funnel size={12} className="text-orange ff-icon-filter" />
         </div>
 
         {sortPopup && <SortPopup />}
