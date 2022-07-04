@@ -1,5 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { categories } from "../backend/db/categories";
+
+const CategoryPill = ({ categories }) => {
+  return (
+    <>
+      <Link to={`/videolistingpage/${categories.categoryName}`}>
+        <button className="btn btn-warning btn-warning-hover ff-btn-secondary">
+          {categories.categoryName}
+        </button>
+      </Link>
+    </>
+  );
+};
 
 const Hero = () => {
   return (
@@ -17,32 +30,20 @@ const Hero = () => {
           <div className="ff-hero-container-text flex flex-col text-left flex-align-start">
             <p className="ff-hero-text-box">
               <p className="h6"> FIX YOUR FITNESS</p>
-
               <p className="h1">LEVEL UP YOURSELF </p>
-
               <p className="h1">
                 WITH <span className="text-orange"> FITFLIX</span>
               </p>
             </p>
-
-            <Link to="/videolistingpage">
+            <Link to="/videolistingpage/all">
               <button class="btn btn-warning-ghost ff-btn-primary btn-lg">
                 START NOW
               </button>
             </Link>
             <div className="ff-hero-container-category">
-              <button className="btn btn-warning btn-warning-hover ff-btn-secondary">
-                YOGA
-              </button>
-              <button className="btn btn-warning btn-warning-hover ff-btn-secondary">
-                PILATES
-              </button>
-              <button className="btn btn-warning btn-warning-hover ff-btn-secondary">
-                CARDIO
-              </button>
-              <button className="btn btn-warning btn-warning-hover ff-btn-secondary">
-                STRENGTH
-              </button>
+              {categories.map((item) => {
+                return <CategoryPill categories={item} key={item._id}/>;
+              })}
             </div>
           </div>
         </div>
