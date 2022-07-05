@@ -4,7 +4,9 @@ import Popup from "./Popup";
 import ClickAwayListener from "react-click-away-listener";
 import { Link } from "react-router-dom";
 
-const VideoCard = () => {
+const VideoCard = ({
+  videos: { _id, title, creator, creatorAvatar, views, imgSrc },
+}) => {
   const [isModalOpen, setisModalOpen] = useState(false);
   const handleClickAway = () => {
     setisModalOpen((isModalOpen) => false);
@@ -13,36 +15,28 @@ const VideoCard = () => {
   return (
     <>
       <div className="ff-video-card">
-        <Link to="/videoPage">
+        <Link to={`/videoPage/${_id}`}>
           <div className="ff-video-card-image">
-            <img
-              src="https://i.ytimg.com/vi/mCi3pv5r09s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDrt-sqI40gPpgU0lPSyalWRHWVuQ"
-              alt="card"
-              className="image"
-            />
+            <img src={imgSrc} alt="card" className="image" />
           </div>
         </Link>
 
         <div className="ff-video-card-content flex flex-align-start flex-justify-space-btw">
           <div className="ff-video-card-content flex flex-align-start flex-justify-space-btw">
-            <Link to="/videoPage">
+            <Link to={`/videoPage/${_id}`}>
               <div className="ff-video-card-content-img">
-                <img
-                  src="https://yt3.ggpht.com/AukCDcmzFMxdgsXZN3K5ydji7Jd9IW6WZ0R2PrMUN51MZkgPJtcLH2zFCby0KoAUb-j4VdMPI-s=s68-c-k-c0x00ffffff-no-rj"
-                  alt="avatar"
-                  class="ff-avatar"
-                />
+                <img src={creatorAvatar} alt="avatar" class="ff-avatar" />
               </div>
             </Link>
 
-            <Link to="/videoPage">
+            <Link to={`/videoPage/${_id}`}>
               <div className="ff-video-card-content-text flex flex-col flex-justify-start text-left">
                 <div className="ff-video-card-content-header flex flex-align-center flex-justify-start">
-                  Lorem ipsum dolor sit.
+                  {title}
                 </div>
                 <div className="ff-video-card-content-footer flex flex-col flex-align-start flex-justify-center">
-                  <div>Author</div>
-                  <div>Views</div>
+                  <div>{creator}</div>
+                  <div>{views} views</div>
                 </div>
               </div>
             </Link>

@@ -9,8 +9,11 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/videoListingPage" element={<VideoListingPage />} />
-        <Route path="/videoPage" element={<VideoPage />} />
+        <Route
+          path="/videoListingPage/:categoryName"
+          element={<VideoListingPage />}
+        />
+        <Route path="/videoPage/:videoId" element={<VideoPage />} />
       </Routes>
     </div>
   );

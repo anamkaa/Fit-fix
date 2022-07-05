@@ -4,6 +4,7 @@ import Aside from "../components/Aside";
 import VideoCard from "../components/VideoCard";
 import CategoryBar from "../components/CategoryBar";
 import { ArrowCircleUp } from "phosphor-react";
+import { videos } from "../backend/db/videos";
 
 const VideoListingPage = () => {
   return (
@@ -25,12 +26,9 @@ const VideoListingPage = () => {
           <CategoryBar />
 
           <div className="ff-container-video-card">
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
+            {videos.map((item) => {
+              return <VideoCard videos={item} key={item._id} />;
+            })}
           </div>
         </div>
       </div>
