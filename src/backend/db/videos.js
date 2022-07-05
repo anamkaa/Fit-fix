@@ -16,6 +16,7 @@ export const videos = [
     dateCreated: "05-11-2020",
     source: "https://www.youtube.com/embed/Eml2xnoLpYE",
     imgSrc: "../assets/yoga1.jpg",
+    categoryName: "yoga"
   },
   {
     _id: uuid(),
@@ -28,6 +29,7 @@ export const videos = [
     dateCreated: "23-12-2015",
     source: "https://www.youtube.com/embed/hJbRpHZr_d0",
     imgSrc: "../assets/yoga2.jpg",
+    categoryName: "yoga"
   },
   {
     _id: uuid(),
@@ -40,6 +42,7 @@ export const videos = [
     dateCreated: "01-09-2022",
     source: "https://www.youtube.com/embed/nQwKKCqkJxg",
     imgSrc: "../assets/yoga3.jpg",
+    categoryName: "yoga"
   },
   {
     _id: uuid(),
@@ -52,6 +55,7 @@ export const videos = [
     dateCreated: "10-10-2020",
     source: "https://www.youtube.com/embed/COp7BR_Dvps",
     imgSrc: "../assets/yoga4.jpg",
+    categoryName: "yoga"
   },
   {
     _id: uuid(),
@@ -64,6 +68,7 @@ export const videos = [
     dateCreated: "13-10-2018",
     source: "https://www.youtube.com/embed/fRBFohrfRd0",
     imgSrc: "../assets/pilates1.jpg",
+    categoryName: "pilates"
   },
   {
     _id: uuid(),
@@ -76,6 +81,7 @@ export const videos = [
     dateCreated: "17-06-2020",
     source: "https://www.youtube.com/embed/Sw6sy8NZCSY",
     imgSrc: "../assets/pilates2.jpg",
+    categoryName: "pilates"
   },
   {
     _id: uuid(),
@@ -88,6 +94,7 @@ export const videos = [
     dateCreated: "20-04-2019",
     source: "https://www.youtube.com/embed/OYO6vjzT490",
     imgSrc: "../assets/pilates3.jpg",
+    categoryName: "pilates"
   },
   {
     _id: uuid(),
@@ -100,6 +107,7 @@ export const videos = [
     dateCreated: "25-05-2018",
     source: "https://www.youtube.com/embed/E1x0b1zSB0w",
     imgSrc: "../assets/pilates4.jpg",
+    categoryName: "pilates"
   },
   {
     _id: uuid(),
@@ -112,6 +120,7 @@ export const videos = [
     dateCreated: "14-10-2021",
     source: "https://www.youtube.com/embed/M0uO8X3_tEA",
     imgSrc: "../assets/cardio1.jpg",
+    categoryName: "cardio"
   },
   {
     _id: uuid(),
@@ -124,6 +133,7 @@ export const videos = [
     dateCreated: "28-06-2022",
     source: "https://www.youtube.com/embed/vSk96UZssg4",
     imgSrc: "../assets/cardio2.jpg",
+    categoryName: "cardio"
   },
   {
     _id: uuid(),
@@ -136,6 +146,7 @@ export const videos = [
     dateCreated: "24-06-2022",
     source: "https://www.youtube.com/embed/WE41pruGReI",
     imgSrc: "../assets/cardio3.jpg",
+    categoryName: "cardio"
   },
   {
     _id: uuid(),
@@ -148,6 +159,7 @@ export const videos = [
     dateCreated: "22-06-2022",
     source: "https://www.youtube.com/embed/hSZvuNnPgKM",
     imgSrc: "../assets/cardio4.jpg",
+    categoryName: "cardio"
   },
   {
     _id: uuid(),
@@ -160,6 +172,7 @@ export const videos = [
     dateCreated: "24-02-2020",
     source: "https://www.youtube.com/embed/bkTqruArt5U",
     imgSrc: "../assets/strength1.jpg",
+    categoryName: "strength"
   },
   {
     _id: uuid(),
@@ -172,6 +185,7 @@ export const videos = [
     dateCreated: "05-04-2021",
     source: "https://www.youtube.com/embed/Q2cMMnUuKYQ",
     imgSrc: "../assets/strength2.jpg",
+    categoryName: "strength"
   },
   {
     _id: uuid(),
@@ -184,5 +198,6 @@ export const videos = [
     dateCreated: "11-01-2021",
     source: "https://www.youtube.com/embed/N4HbeyDChFw",
     imgSrc: "../assets/strength3.jpg",
+    categoryName: "strength"
   },
 ];
