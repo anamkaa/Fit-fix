@@ -5,7 +5,7 @@ import ClickAwayListener from "react-click-away-listener";
 import { Link } from "react-router-dom";
 
 const VideoCard = ({
-  videos: { _id, title, creator, creatorAvatar, views, imgSrc },
+  videos: { _id, title, creator, creatorAvatar, views, imgSrc, dateCreated },
 }) => {
   const [isModalOpen, setisModalOpen] = useState(false);
   const handleClickAway = () => {
@@ -36,7 +36,9 @@ const VideoCard = ({
                 </div>
                 <div className="ff-video-card-content-footer flex flex-col flex-align-start flex-justify-center">
                   <div>{creator}</div>
-                  <div>{views} views</div>
+                  <div>
+                    {views} views • {dateCreated}
+                  </div>
                 </div>
               </div>
             </Link>
