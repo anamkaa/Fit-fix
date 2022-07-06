@@ -1,8 +1,11 @@
 import React from "react";
 import { Barbell } from "phosphor-react";
 import { Link } from "react-router-dom";
+import { useFilter } from "../context/filter-context";
 
 const Navbar = () => {
+  const { filterDispatch } = useFilter();
+
   return (
     <>
       <nav className="nav-wrap ff-nav-wrap">
@@ -12,7 +15,17 @@ const Navbar = () => {
         </div>
 
         <div className="ff-nav-wrap-search">
-          <input type="search" className="ff-nav-search" placeholder="search" />
+          <input
+            type="search"
+            className="ff-nav-search"
+            placeholder="search"
+            onChange={(e) =>
+              filterDispatch({
+                type: "FILTER_BY_SEARCH",
+                payload: e.target.value,
+              })
+            }
+          />
         </div>
 
         <div className="ff-nav-icon-wrap">
