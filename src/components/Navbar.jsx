@@ -28,11 +28,13 @@ const Navbar = () => {
           />
         </div>
 
+<Link to="/login">
         <div className="ff-nav-icon-wrap">
           <div className="ff-nav-icon-chip">
             <Barbell size={32} />
           </div>
         </div>
+        </Link>
       </nav>
     </>
   );
