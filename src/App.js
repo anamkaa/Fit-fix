@@ -3,6 +3,13 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import VideoListingPage from "./pages/VideoListingPage";
 import VideoPage from "./pages/VideoPage";
+import SignupPage from "./pages/SignupPage";
+import LoginPage from "./pages/LoginPage";
+import LikedVideos from "./pages/LikedVideos";
+import PlaylistPage from "./pages/PlaylistPage";
+import WatchlaterPage from "./pages/WatchlaterPage";
+import HistoryPage from "./pages/HistoryPage";
+import { RequireAuth } from "./components/RequireAuth";
 
 function App() {
   return (
@@ -14,6 +21,40 @@ function App() {
           element={<VideoListingPage />}
         />
         <Route path="/videoPage/:videoId" element={<VideoPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route
+          path="/likedVideos"
+          element={
+            <RequireAuth>
+              <LikedVideos />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/playlist"
+          element={
+            <RequireAuth>
+              <PlaylistPage />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/watchlater"
+          element={
+            <RequireAuth>
+              <WatchlaterPage />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/history"
+          element={
+            <RequireAuth>
+              <HistoryPage />
+            </RequireAuth>
+          }
+        />
       </Routes>
     </div>
   );
