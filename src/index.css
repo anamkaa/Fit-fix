@@ -28,6 +28,9 @@ input[type="search"] {
   word-spacing: 20px;
 }
 
-input[type="radio"] {
+input[type="radio"],
+input[type="checkbox"],
+input[type="text"] {
   accent-color: var(--ff-primary);
+  color: var(--ff-primary);
 }
