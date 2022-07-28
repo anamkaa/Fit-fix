@@ -2,12 +2,13 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Aside from "../components/Aside";
 import VideoPlayer from "../components/VideoPlayer";
-import { videos } from "../backend/db/videos";
 import { useParams } from "react-router-dom";
-// import axios from "axios";
+import { useVideos } from "../context/video-context";
 
 const VideoPage = () => {
   const { videoId } = useParams();
+
+  const { videos } = useVideos();
 
   return (
     <>
@@ -17,7 +18,7 @@ const VideoPage = () => {
         <Aside />
 
         <div className="ff-container-videopage">
-          <VideoPlayer videos={videos.find((video) => video._id === videoId)} />
+          <VideoPlayer video={videos.find((item) => item._id === videoId)} />
 
           <div className="ff-container-videonote">
             <div className="ff-videonote-wrap">
