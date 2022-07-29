@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Aside from "../components/Aside";
 import { useWatchlater } from "../context/watchlater-context";
-import VideoCard from "../components/VideoCard";
+import DisplayVideoCard from "../components/DisplayVideoCard";
 
 const PlaylistPage = () => {
   const {
@@ -19,7 +19,7 @@ const PlaylistPage = () => {
         <div className="ff-container-content">
           {watchlater.length
             ? watchlater.map((item) => {
-                return <VideoCard video={item} key={item._id} />;
+                return <DisplayVideoCard video={item} key={item._id} />;
               })
             : "No videos to watchlater"}
         </div>
