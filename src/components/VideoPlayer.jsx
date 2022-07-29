@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { ClockAfternoon, Queue, ThumbsUp } from "phosphor-react";
+import ReactPlayer from "react-player";
 import { useVideos } from "../context/video-context";
 import { useAuth } from "../context/auth-context";
 import { useLikes } from "../context/likes-context";
@@ -13,6 +14,8 @@ import {
   addToWatchlaterService,
   removeFromWatchlaterService,
 } from "../services/watchlater-services";
+import { useHistory } from "../context/history-context";
+import { addToHistoryService } from "../services/history-services";
 
 const VideoPlayer = ({ video }) => {
   const { videos } = useVideos();
@@ -27,6 +30,11 @@ const VideoPlayer = ({ video }) => {
     watchlaterState: { watchlater },
     watchlaterDispatch,
   } = useWatchlater();
+
+  const {
+    historyState: { history },
+    historyDispatch,
+  } = useHistory();
 
   const navigate = useNavigate();
 
@@ -65,19 +73,24 @@ const VideoPlayer = ({ video }) => {
     }
   };
 
+  const addToHistory = () => {
+    if (isLogged) {
+      addToHistoryService(userSelectedVideo, tokenVal, historyDispatch);
+    }
+  };
+
   return (
     <>
       <div className="ff-container-videoplayer">
         <div className="ff-iframe">
-          <iframe
-            width="560"
-            height="315"
-            src={video.source}
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+          <ReactPlayer
+            url={video.source}
+            width="100%"
+            height="100%"
+            controls={true}
+            playing={true}
+            onStart={() => addToHistory()}
+          />
         </div>
 
         <div className="ff-videoplayer-text flex flex-col">
