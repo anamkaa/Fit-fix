@@ -1,9 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Aside from "../components/Aside";
-import { useAuth } from "../context/auth-context";
 import { useLikes } from "../context/likes-context";
-import VideoCard from "../components/VideoCard";
+import DisplayVideoCard from "../components/DisplayVideoCard";
 
 const LikedVideos = () => {
   const {
@@ -20,7 +19,7 @@ const LikedVideos = () => {
         <div className="ff-container-content">
           {likes.length
             ? likes.map((item) => {
-                return <VideoCard video={item} key={item._id} />;
+                return <DisplayVideoCard video={item} key={item._id} />;
               })
             : "No Liked Videos"}
         </div>
