@@ -1,0 +1,26 @@
+.playlist-card-wrap{
+    margin: 1rem 0rem;
+    padding: 0.3rem;
+    width: 20rem;
+}
+
+.playlist-card-image-wrap{
+    position: relative;
+}
+
+.playlist-backdrop{
+    background-color: black;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    opacity: 0.5;
+}
+
+.playlist-card-content{
+    z-index: 99;
+    color: white;
+    font-weight: 600;
+    gap: 0.3rem;
+}
