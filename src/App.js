@@ -10,6 +10,7 @@ import PlaylistPage from "./pages/PlaylistPage";
 import WatchlaterPage from "./pages/WatchlaterPage";
 import HistoryPage from "./pages/HistoryPage";
 import { RequireAuth } from "./components/RequireAuth";
+import SinglePlaylistPage from "./pages/SinglePlaylistPage";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
             </RequireAuth>
           }
         />
+        <Route path="/singlePlaylist/:playlistId" element={<SinglePlaylistPage/>} />
       </Routes>
     </div>
   );
