@@ -49,7 +49,7 @@ const Hero = () => {
             </p>
             <Link to="/videolistingpage/all">
               <button
-                class="btn btn-warning-ghost ff-btn-primary btn-lg"
+                className="btn btn-warning-ghost ff-btn-primary btn-lg"
                 onClick={() => {
                   filterDispatch({
                     type: "FILTER_BY_CATEGORY",

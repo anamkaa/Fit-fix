@@ -19,7 +19,7 @@ const SignupForm = () => {
         email: email,
         password: password,
       });
-      console.log(data);
+      // console.log(data);
       localStorage.setItem("token", data.encodedToken);
       navigate("/");
     } catch (error) {
