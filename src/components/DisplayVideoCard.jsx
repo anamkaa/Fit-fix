@@ -92,7 +92,11 @@ const DisplayVideoCard = ({ video }) => {
           <div className="ff-video-card-content flex flex-align-start flex-justify-space-btw">
             <Link to={`/videoPage/${video?._id}`}>
               <div className="ff-video-card-content-img">
-                <img src={video.creatorAvatar} alt="avatar" class="ff-avatar" />
+                <img
+                  src={video.creatorAvatar}
+                  alt="avatar"
+                  className="ff-avatar"
+                />
               </div>
             </Link>
 

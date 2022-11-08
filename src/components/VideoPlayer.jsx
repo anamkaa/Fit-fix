@@ -46,7 +46,7 @@ const VideoPlayer = ({ video }) => {
     } else {
       navigate("/login");
     }
-    console.log(userSelectedVideo);
+    // console.log(userSelectedVideo);
   };
 
   const removeFromLike = () => {
@@ -153,7 +153,7 @@ const VideoPlayer = ({ video }) => {
               <img
                 src={video.creatorAvatar}
                 alt={video.creator}
-                class="ff-avatar"
+                className="ff-avatar"
               />{" "}
               {video.creator}
             </div>
